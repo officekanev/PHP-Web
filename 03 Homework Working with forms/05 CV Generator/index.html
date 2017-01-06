@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Problem05</title>
+    <script src="add.js"></script>
+</head>
+<body>
+<form action="05 CV Generator.php" method="get">
+
+    <fieldset>
+        <legend>Personal Info</legend>
+        <input type="text" name="firstName" placeholder="First Name" required="required"/><br>
+        <input type="text" name="lastName" placeholder="Last Name" required="required"/><br>
+        <input type="text" name="email" placeholder="Email" required="required"/><br>
+        <input type="number" name="phone" placeholder="Phone Number" required="required"/><br>
+        <label for="female">Female</label>
+        <input type="radio" value="female" id="female" name="sex" required="required"/>
+        <label for="male">Male</label>
+        <input type="radio" value="male" id="male" name="sex" required="required"/><br>
+        Birth Date<br>
+        <input type="date" name="birthDate" required="required"/><br>
+        Nationality<br>
+        <select name="nationality" id="nationality">
+            <option value="Bulgarian">Bulgarian</option>
+            <option value="Seribian">Seribian</option>
+            <option value="American">American</option>
+            <option value="Turkish">Turkish</option>
+            <option value="Romanian">Romanian</option>
+            <option value="Other">Other</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Last work Position</legend>
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" name="companyName" required="required"/><br>
+        <label for="dateFrom">From</label>
+        <input type="date" name="from" id="dateFrom" required="required"/><br>
+        <label for="dateTo">To</label>
+        <input type="date" name="to" id="dateTo" required="required"/>
+    </fieldset>
+
+    <fieldset id ="pcSkills">
+        <legend>Computer skills</legend>
+        <div class = "clone">
+            <input type="text" name="pcLanguage[]" required="required"/>
+            <select name="programmingLanguage[]" id="programmingLanguage">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Master">Master</option>
+            </select>
+        </div>
+        <button type="button" onclick="removeElement()">Remove Language</button>
+        <button type="button" onclick="addLang()">Add Language</button>
+    </fieldset>
+
+    <fieldset id="lang">
+        <legend>Other skills</legend>
+        <p>Languages</p>
+        <div class="clone2">
+            <input type="text" name="language[]" required="required"/>
+            <select name="spoken[]" id="lvlSpoken">
+                <option value="none">-Comperison-</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <select name="reading[]" id="lvlReadomg">
+                <option value="none">-Reading-</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <select name="writing[]" id="lvlWriting">
+                <option value="none">-Writing-</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </div>
+        <button type="button" onclick="remLangNormLang()">Remove Language</button>
+        <button type="button" onclick="addLangNormLang()">Add Language</button>
+        <p>Driving license</p>
+        <label for="B">B</label>
+        <input type="checkbox" id="B" name="drive[]" value="B" />
+        <label for="A">A</label>
+        <input type="checkbox" id="A" name="drive[]" value="A"/>
+        <label for="C">C</label>
+        <input type="checkbox" id="C" name="drive[]" value="C" />
+    </fieldset>
+
+    <input type="submit" value="Generate CV"/>
+</form>
+</body>
+</html>
