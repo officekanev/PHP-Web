@@ -1,0 +1,14 @@
+ROYAL@DESKTOP_BFNQJQE MINGW64
+$ php cli-test.php sum
+22
+33
+
+ROYAL@DESKTOP_BFNQJQE MINGW64
+$ php cli-test.php subtract
+33
+22
+
+ROYAL@DESKTOP_BFNQJQE MINGW64
+$ php cli-test.php multiply
+2
+3
